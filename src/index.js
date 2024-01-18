@@ -1,7 +1,8 @@
 const app = require("./app/app");
-const sequelize = require("./database");
+require("dotenv").config();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
 });

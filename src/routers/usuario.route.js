@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const Usuario = require("../models/Usuario.model");
 
-//Para obtener usuarios
+
 router.get("/", async (req, res) => {
   try { 
     const user = await Usuario.findAll();
@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-//Para buscar un usuario por ID
+
 router.get("/buscar", async (req, res) => {
   const nombreDeUsuario = req.body.nombreDeUsuario;
   try { 
@@ -22,7 +22,7 @@ router.get("/buscar", async (req, res) => {
   }
 });
 
-//Para agregar un nuevo usuario
+
 router.post("/add", async (req, res) => {
   const { id_usuario, nombreDeUsuario, contrasena } = req.body;
   try { 
